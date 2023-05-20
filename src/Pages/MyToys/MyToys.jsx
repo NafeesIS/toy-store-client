@@ -25,37 +25,75 @@ const MyToys = () => {
   );
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/mytoys/${id}`, {
-      method: 'DELETE',
-    })
-      .then(res => {
-        if (res.ok) {
-          // Toy successfully deleted
-          // You may want to update the toysData state or fetch the updated list of toys
-          console.log(`Deleted toy with id ${id}`);
-          Swal.fire({
-            title: 'Delete!',
-            text: 'Deleted Successfully!',
-            icon: 'delete',
-            confirmButtonText: 'Cool'
+    Swal.fire({
+      title: 'Are You Sure!',
+      text: "you won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/mytoys/${id}`, {
+          method: 'DELETE',
+        })
+          .then(res => {
+            if (res.ok) {
+              // Toy successfully deleted
+              // Update the toysData state or fetch the updated list of toys
+  
+              // Option 1: Update the toysData state
+              setToysData(prevToysData => prevToysData.filter(toy => toy._id !== id));
+  
+              // Option 2: Fetch the updated list of toys
+              // fetch(url)
+              //   .then(res => res.json())
+              //   .then(data => setToysData(data));
+  
+              console.log(`Deleted toy with id ${id}`);
+              Swal.fire({
+                title: 'Delete!',
+                text: 'Deleted Successfully!',
+                icon: 'delete',
+                confirmButtonText: 'Cool'
+              });
+            } else {
+              // Handle unsuccessful deletion
+              console.error(`Error deleting toy with id ${id}`);
+            }
           })
-        } else {
-          // Handle unsuccessful deletion
-          console.error(`Error deleting toy with id ${id}`);
-        }
-      })
-      .catch(error => {
-        // Handle error here
-        console.error('Error deleting toy:', error);
-      });
-  }
-
+          .catch(error => {
+            // Handle error here
+            console.error('Error deleting toy:', error);
+          });
+      }
+    });
+  };
+  
   const handleEdit = (id) => {
     // Redirect to the edit page for the selected toy
-    // const history = useHistory();
     // You can use React Router's history object or any routing library you are using
     // Example using React Router:
-    history.push(`/toys/${id}/edit`);
+    // history.push(`/toys/${id}/edit`);
+
+    // Instead of directly redirecting, you can show a confirmation dialog and handle the edit action there
+    Swal.fire({
+      title: 'Are You Sure!',
+      text: "Do you want to edit this toy?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, edit it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Redirect to the edit page for the selected toy
+        // const history = useHistory();
+        // Example using React Router:
+        history.push(`/toys/${id}/edit`);
+      }
+    });
   }
 
   return (
