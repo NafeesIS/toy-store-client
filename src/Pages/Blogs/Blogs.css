@@ -1,0 +1,58 @@
+.my_blog {
+    padding: 30px;
+    background-color: lightslategrey;
+    margin-top: 10px;
+}
+
+.q1 {
+    background-color: lightpink;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 45px;
+    transition: all 0.2s;
+}
+
+.q1:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.q2 {
+    background-color: lightskyblue;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 45px;
+}
+
+.q2:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.q3 {
+    background-color: lightgreen;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 45px;
+}
+
+.q3:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.q4 {
+    background-color: lightseagreen;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 45px;
+}
+
+.q4:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+    transition: 0.2s;
+}
