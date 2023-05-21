@@ -52,37 +52,37 @@ const router = createBrowserRouter([
             {
                 path: '/edittoy/:id',
                 element: <EditToy></EditToy>,
-                loader: ({ params }) => fetch(`http://localhost:5000/mytoys/${params.id}`)
+                loader: ({ params }) => fetch(`https://toys-shop-website-server.vercel.app/mytoys/${params.id}`)
             },
             {
                 path: '/toydetails/:id',
                 element: <ToyDetails></ToyDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/alltoys/${params.id}`)
+                loader: ({ params }) => fetch(`https://toys-shop-website-server.vercel.app/alltoys/${params.id}`)
             },
             {
                 path: '/superherotoydetails/:id',
                 element: <SuperHeroToyDetails></SuperHeroToyDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/superhero/${params.id}`)
+                loader: ({ params }) => fetch(`https://toys-shop-website-server.vercel.app/superhero/${params.id}`)
             },
             {
                 path: '/transformertoydetails/:id',
                 element: <TransformerToyDetails></TransformerToyDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/transformer/${params.id}`)
+                loader: ({ params }) => fetch(`https://toys-shop-website-server.vercel.app/transformer/${params.id}`)
             },
             {
                 path: '/constructortoydetails/:id',
                 element: <ConstructorToyDetails></ConstructorToyDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/constructor/${params.id}`)
+                loader: ({ params }) => fetch(`https://toys-shop-website-server.vercel.app/constructor/${params.id}`)
             },
             {
                 path: '/latesttoysviewdetails/:id',
                 element: <LatesToysViewDetails>,</LatesToysViewDetails>,
-                loader: ({params})=> fetch(`http://localhost:5000/latesttoys/${params.id}`)
+                loader: ({params})=> fetch(`https://toys-shop-website-server.vercel.app/latesttoys/${params.id}`)
             },
             {
                 path: '/highestsellingsviewdetails/:id',
                 element: <HighestSellingsViewDetails></HighestSellingsViewDetails>,
-                loader: ({params})=> fetch(`http://localhost:5000/highestsellings/${params.id}`)
+                loader: ({params})=> fetch(`https://toys-shop-website-server.vercel.app/highestsellings/${params.id}`)
             },
             {
                 path: '/blogs',

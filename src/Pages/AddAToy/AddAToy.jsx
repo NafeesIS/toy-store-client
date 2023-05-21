@@ -20,7 +20,7 @@ const AddAToy = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission here
-        fetch(`http://localhost:5000/mytoys`, {
+        fetch(`https://toys-shop-website-server.vercel.app/mytoys`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

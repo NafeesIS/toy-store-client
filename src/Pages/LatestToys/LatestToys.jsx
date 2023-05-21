@@ -8,7 +8,7 @@ const LatestToys = () => {
 
     useEffect(() => {
         // Fetch latest toys data from the API
-        fetch('http://localhost:5000/latesttoys')
+        fetch('https://toys-shop-website-server.vercel.app/latesttoys')
             .then(res => res.json())
             .then(data => setLatestToys(data))
             .catch(error => console.log(error));

@@ -8,7 +8,7 @@ const HighestSellings = () => {
 
     useEffect(() => {
         // Fetch latest toys data from the API
-        fetch('http://localhost:5000/highestsellings')
+        fetch('https://toys-shop-website-server.vercel.app/highestsellings')
             .then(res => res.json())
             .then(data => setHighestsellings(data))
             .catch(error => console.log(error));
