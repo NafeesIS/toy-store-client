@@ -24,10 +24,6 @@ const Banner = () => {
                     <div className='text-white md:space-y-7 p-4'>
                         <h1 className="sm:text-2xl md:text-6xl text-white font-bold font-serif italic pt-4 items-center ml-4" >Quality Toys for <br /> <span className="text-yellow-500">Endless Playtime</span>  <br /> <span className="text-green-500">Adventures!</span> </h1>
 
-                        <div className="mb-7 p-4">
-                            
-                            
-                        </div>
                     </div>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
