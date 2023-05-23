@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
+
 import UseDocumentTitle from "../UseDocumentTitle/UseDocumentTile";
+import { AuthContext } from "../../Provider/AuthProvider";
 // import PrivateRoutes from "../../PrivateRoutes/PrivateRoutes";
 
 const AllToys = () => {
   UseDocumentTitle('Toy Store | AllToys');
+  const { user } = useContext(AuthContext);
   const [toysData, setToysData] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -55,9 +58,19 @@ const AllToys = () => {
                 <td className="py-2 px-4 border-b border-gray-300 text-right">{toy.price}</td>
                 <td className="py-2 px-4 border-b border-gray-300 text-center">{toy.available_quantity}</td>
                 <td className="py-2 px-4 border-b border-gray-300">
-                <Link to={`/toydetails/${toy._id}`}> <button className="bg-pink-800 text-white py-1 px-3 rounded hover:bg-pink-900">View Details</button></Link> 
-
-
+                  {user ? (
+                    <Link to={`/toydetails/${toy._id}`}>
+                      <button className="bg-pink-800 text-white py-1 px-3 rounded hover:bg-pink-900">
+                        View Details
+                      </button>
+                    </Link>
+                  ) : (
+                    <Link to="/login">
+                      <button className="bg-pink-800 text-white py-1 px-3 rounded hover:bg-pink-900">
+                        Login to View Details
+                      </button>
+                    </Link>
+                  )}
                 </td>
               </tr>
             ))}
@@ -69,6 +82,3 @@ const AllToys = () => {
 };
 
 export default AllToys;
-
-
-//to={`/toydetails/${toy._id}`}

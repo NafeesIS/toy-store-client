@@ -18,6 +18,7 @@ const MyToys = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedToy, setSelectedToy] = useState(null);
   const [isLoading, setIsLoading] = useState(true); // Added loading state
+  const [sortOrder, setSortOrder] = useState(null); // Added sorting state
 
   useEffect(() => {
     setIsLoading(true); // Set loading state to true before fetching data
@@ -86,6 +87,16 @@ const MyToys = () => {
     });
   };
 
+  const handleSort = () => {
+    if (sortOrder === 'asc') {
+      setToysData(prevToysData => [...prevToysData].sort((a, b) => a.price - b.price));
+      setSortOrder('desc');
+    } else {
+      setToysData(prevToysData => [...prevToysData].sort((a, b) => b.price - a.price));
+      setSortOrder('asc');
+    }
+  };
+
   return (
     <div className="container mx-auto px-4">
       <h1 className="text-5xl text-center text-pink-800 my-8 font-bold font-serif italic mb-4">My Toys</h1>
@@ -98,11 +109,15 @@ const MyToys = () => {
           onChange={handleSearch}
         />
       </div>
+      <div className="mb-4">
+        <button className="btn btn-primary" onClick={handleSort}>
+          Sort by Price {sortOrder === 'asc' ? '▲' : '▼'}
+        </button>
+      </div>
       {isLoading ? (
-
-        <div className="flex items-center justify-center h-screen"><RingLoader color="#36d7b7" /></div>
-
-
+        <div className="flex items-center justify-center h-screen">
+          <RingLoader color="#36d7b7" />
+        </div>
       ) : (
         <div className="overflow-x-auto">
           <table className="w-full border-collapse">
@@ -155,8 +170,7 @@ const MyToys = () => {
               <p>Price: {selectedToy.price}</p>
               <p>Available Quantity: {selectedToy.available_quantity}</p>
               <p>Sub-category: {selectedToy.sub_category}</p>
-              <p>Description: {selectedToy.
-                detail_description}</p>
+              <p>Description: {selectedToy.detail_description}</p>
             </div>
           </div>
         )}
