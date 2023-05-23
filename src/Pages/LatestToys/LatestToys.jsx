@@ -35,7 +35,7 @@ const LatestToys = () => {
                     </Link>
                   ) : (
                     <Link to="/login">
-                      <button className="btn btn-primary bg-pink-800">Login to View Details</button>
+                      <button className="btn btn-primary bg-pink-800">View Details</button>
                     </Link>
                   )}
                 </div>

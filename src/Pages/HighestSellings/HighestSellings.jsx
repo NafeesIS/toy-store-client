@@ -1,9 +1,11 @@
 // import React from 'react';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 
 const HighestSellings = () => {
+    const {user} = useContext(AuthContext)
     const [highestsellings, setHighestsellings] = useState([]);
 
     useEffect(() => {
