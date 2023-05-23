@@ -10,10 +10,7 @@ const Banner = () => {
                         <h1 className="sm:text-2xl md:text-6xl text-white font-bold font-serif italic pt-4 items-center ml-4">
                             <span className="">Bringing <span>Smiles</span> </span>  <br /> <span className="text-pink-600">to Kids</span> <br /> with Our <br /> <span className="text-yellow-300"> Amazing Toy </span><br /> <span className="text-green-500">Collection!</span></h1>
 
-                        {/* <div className="mb-7 p-4">
-                            <button className="btn  btn-primary bg-pink-800  mr-5   sm:text-white">Latest Toys</button>
-                            <button className="btn btn-outline btn-warning">Discover More</button>
-                        </div> */}
+                       
                     </div>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
