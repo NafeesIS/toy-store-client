@@ -25,7 +25,7 @@ const Banner = () => {
                         <h1 className="sm:text-2xl md:text-6xl text-white font-bold font-serif italic pt-4 items-center ml-4" >Quality Toys for <br /> <span className="text-yellow-500">Endless Playtime</span>  <br /> <span className="text-green-500">Adventures!</span> </h1>
 
                         <div className="mb-7 p-4">
-                            <button className="btn  btn-primary bg-pink-800  mr-5   sm:text-white">Latest Toys</button>
+                            
                             <button className="btn btn-outline  btn-warning">Discover More</button>
                         </div>
                     </div>
