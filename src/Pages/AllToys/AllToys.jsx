@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import UseDocumentTitle from "../UseDocumentTitle/UseDocumentTile";
 // import PrivateRoutes from "../../PrivateRoutes/PrivateRoutes";
 
 const AllToys = () => {
+  UseDocumentTitle('Toy Store | AllToys');
   const [toysData, setToysData] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
 

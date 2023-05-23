@@ -1,7 +1,9 @@
 // import React from 'react';
+import UseDocumentTitle from '../UseDocumentTitle/UseDocumentTile';
 import './Blogs.css'
-import Footer from '../Shared/Footer/Footer';
+
 const Blogs = () => {
+    UseDocumentTitle('Toy Store | Blogs');
     return (
         <div className='my_blog'>
             <div className='q1'>

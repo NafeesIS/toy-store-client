@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Navigate } from "react-router-dom";
-
+import { RingLoader } from "react-spinners";
 const PrivateRoutes = ({ children }) => {
   const { user } = useContext(AuthContext);
   const [isLoading, setIsLoading] = useState(true);
@@ -20,7 +20,7 @@ const PrivateRoutes = ({ children }) => {
 
   if (isLoading) {
     // Show a loading indicator or skeleton screen while checking the authentication state
-    return <div>Loading...</div>;
+    return <div className="flex items-center justify-center h-screen"><RingLoader color="#36d7b7" /></div>;
   }
 
   if (user) {

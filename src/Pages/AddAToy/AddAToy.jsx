@@ -1,9 +1,11 @@
 import { useState, useContext, useEffect } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
+import UseDocumentTitle from '../UseDocumentTitle/UseDocumentTile';
 // import { json } from 'react-router-dom';
 
 const AddAToy = () => {
+    UseDocumentTitle('Toy Store | AddAToy');
     const authContext = useContext(AuthContext);
     const userEmail = authContext.user.email;
     const [picture, setPictureUrl] = useState('');

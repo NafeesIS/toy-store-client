@@ -88,13 +88,17 @@ const router = createBrowserRouter([
                 path: '/blogs',
                 element:<Blogs></Blogs>
             },
-            {
-                path: '*',
-                element:<PagerNotFound></PagerNotFound>
-            }
+           
 
         ]
+       
     },
+    {
+        
+            path: '*',
+            element:<PagerNotFound></PagerNotFound>
+        
+    }
 ]);
 
 

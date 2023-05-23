@@ -17,7 +17,7 @@ const HighestSellings = () => {
         <div>
             <div className="text-center">
                 <h2 className="text-5xl text-center text-pink-800 my-16 font-bold font-serif italic mb-8">Our Best Selling Toys</h2>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
                     {highestsellings.map(toy => (
                         <div key={toy._id} className="card w-96 bg-base-100 shadow-xl">
                             <figure className="px-10 pt-10">

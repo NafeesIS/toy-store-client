@@ -1,8 +1,10 @@
 // import React from 'react';
 
 import { useLoaderData } from "react-router-dom";
+import UseDocumentTitle from "../UseDocumentTitle/UseDocumentTile";
 
 const SuperHeroToyDetails = () => {
+    UseDocumentTitle('Toy Store | ViewDetails');
     const toy = useLoaderData();
     console.log(toy)
 

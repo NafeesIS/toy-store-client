@@ -3,8 +3,10 @@ import { useState, useContext, useEffect } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
 import { useLoaderData } from 'react-router-dom';
+import UseDocumentTitle from '../UseDocumentTitle/UseDocumentTile';
 
 const EditToy = () => {
+    UseDocumentTitle('Toy Store | Update Toy');
     const updateToyData = useLoaderData();
     console.log(updateToyData)
     const authContext = useContext(AuthContext);
