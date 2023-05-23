@@ -51,10 +51,7 @@ const Banner = () => {
                     <div className='text-white md:space-y-7 p-4'>
                         <h1 className="sm:text-2xl md:text-6xl text-white font-bold font-serif italic pt-4 items-center ml-4" >Find the <br /> <span className="text-green-500">Perfect Toy</span> <br /> for Every <br /> <span className="text-pink-500">Age and <br /> Interest!</span> </h1>
 
-                        <div className="mb-7 p-4">
-                            <button className="btn  btn-primary bg-pink-800  mr-5   sm:text-white">Latest Toys</button>
-                            
-                        </div>
+                        
                     </div>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
