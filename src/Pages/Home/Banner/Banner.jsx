@@ -26,7 +26,7 @@ const Banner = () => {
 
                         <div className="mb-7 p-4">
                             
-                            <button className="btn btn-outline  btn-warning">Discover More</button>
+                            
                         </div>
                     </div>
                 </div>
