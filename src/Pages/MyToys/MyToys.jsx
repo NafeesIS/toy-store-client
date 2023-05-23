@@ -99,10 +99,10 @@ const MyToys = () => {
         />
       </div>
       {isLoading ? (
-        
-          <div className="flex items-center justify-center h-screen"><RingLoader color="#36d7b7" /></div>
-          
-        
+
+        <div className="flex items-center justify-center h-screen"><RingLoader color="#36d7b7" /></div>
+
+
       ) : (
         <div className="overflow-x-auto">
           <table className="w-full border-collapse">
@@ -154,9 +154,9 @@ const MyToys = () => {
               <p>Seller Email: {selectedToy.seller_email}</p>
               <p>Price: {selectedToy.price}</p>
               <p>Available Quantity: {selectedToy.available_quantity}</p>
-              <p>Category: {selectedToy.category}</p>
               <p>Sub-category: {selectedToy.sub_category}</p>
-              <p>Description: {selectedToy.description}</p>
+              <p>Description: {selectedToy.
+                detail_description}</p>
             </div>
           </div>
         )}
