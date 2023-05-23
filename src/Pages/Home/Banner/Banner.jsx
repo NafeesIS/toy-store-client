@@ -37,9 +37,7 @@ const Banner = () => {
                     <div className='text-white md:space-y-7 p-4'>
                         <h1 className="sm:text-2xl md:text-6xl text-white font-bold font-serif italic pt-4 items-center ml-4" >Where Playtime <br /> <span className="text-yellow-300">Dreams</span>  <br /> <span className="text-green-500"> Come True!</span></h1>
 
-                        <div className="mb-7 p-4">
-                            
-                        </div>
+                        
                     </div>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
