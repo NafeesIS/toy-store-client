@@ -1,5 +1,5 @@
 // import React from 'react';
-// import kidImg from '../../../assets/happy_kid.png'
+
 
 import AboutUs from "../../AboutUs/AboutUs";
 import HighestSellings from "../../HighestSellings/HighestSellings";
