@@ -9,7 +9,6 @@ import Banner from "../Banner/Banner";
 import Gallery from "../Gallery/Gallery";
 import ShopByCategory from "../ShopByCategory/ShopByCategory";
 
-// import kid_car from '../../../assets/banner/kid_toy_car.jpg'
 const Home = () => {
     UseDocumentTitle('Toy Store | Home');
     return (
@@ -23,5 +22,6 @@ const Home = () => {
         </div>
     );
 };
+
 
 export default Home;
